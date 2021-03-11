@@ -3,73 +3,15 @@
   "version": 1,
   "newProjectRoot": "projects",
   "cli": {
-      "defaultCollection": "@nativescript/schematics"
+    "defaultCollection": "@nativescript/schematics"
   },
   "projects": {
-      "workspace": {
-          "root": "",
-          "sourceRoot": "src",
-          "projectType": "application",
-          "prefix": "app",
-          "schematics": {
-              "@nativescript/schematics:component": {
-                  "styleext": "scss"
-              }
-          },
-          "architect": {
-              "build": {
-                  "builder": "@angular-devkit/build-angular:browser",
-                  "options": {
-                      "aot": true,
-                      "outputPath": "dist/workspace",
-                      "index": "src/index.html",
-                      "main": "src/main.ts",
-                      "polyfills": "src/polyfills.ts",
-                      "tsConfig": "tsconfig.app.json",
-                      "assets": [
-                          "src/favicon.ico",
-                          "src/assets"
-                      ],
-                      "styles": [
-                          "src/styles.scss"
-                      ],
-                      "scripts": []
-                  },
-                  "configurations": {
-                      "production": {
-                          "budgets": [{
-                              "type": "anyComponentStyle",
-                              "maximumWarning": "6kb"
-                          }],
-                          "fileReplacements": [{
-                              "replace": "src/environments/environment.ts",
-                              "with": "src/environments/environment.prod.ts"
-                          }],
-                          "optimization": true,
-                          "outputHashing": "all",
-                          "sourceMap": false,
-                          "extractCss": true,
-                          "namedChunks": false,
-                          "aot": true,
-                          "extractLicenses": true,
-                          "vendorChunk": false,
-                          "buildOptimizer": true
-                      }
-                  }
-              },
-              "serve": {
-                  "builder": "@angular-devkit/build-angular:dev-server",
-                  "options": {
-                      "browserTarget": "workspace:build"
-                  },
-                  "configurations": {
-                      "production": {
-                          "browserTarget": "workspace:build:production"
-                      }
-                  }
-              }
-          }
-      }
+    "drawer-navigation": {
+      "root": "",
+      "sourceRoot": "src",
+      "projectType": "application",
+      "prefix": "ns"
+    }
   },
-  "defaultProject": "workspace"
+  "defaultProject": "drawer-navigation"
 }

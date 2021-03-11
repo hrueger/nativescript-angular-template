@@ -1,18 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
+import { NativeScriptModule } from "@nativescript/angular";
+import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    bootstrap: [
+        AppComponent
+    ],
+    imports: [
+        AppRoutingModule,
+        NativeScriptModule,
+        NativeScriptUISideDrawerModule
+    ],
+    declarations: [
+        AppComponent
+    ],
+    schemas: [
+        NO_ERRORS_SCHEMA
+    ]
 })
 export class AppModule { }
